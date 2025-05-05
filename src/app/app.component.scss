@@ -1,0 +1,63 @@
+.ef-startpage-grid {
+  grid-row-gap: 0;
+  display: grid;
+  grid: auto auto auto / 1fr minmax(1px, var(--main-content-max-width)) 1fr;
+  grid-template-areas:
+      "header header header"
+      ". main-content ."
+      "footer footer footer";
+  margin: 0;
+}
+
+header {
+  grid-area: header;
+  background-color: #111;
+  position: relative;
+}
+
+.main-content {
+  grid-area: main-content;
+  background-color: #666;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #999;
+}
+
+.hero {
+  min-height: 2rem;
+  overflow: hidden;
+  &__img {
+    max-height: 40rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+    overflow: hidden;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+    vertical-align: middle;
+    border-style: none;
+  }
+}
+
+.header-features {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.header-features__wrapper {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.header-features__row {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+}
