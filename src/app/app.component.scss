@@ -32,6 +32,7 @@ footer {
     max-height: 40rem;
     -o-object-fit: cover;
     object-fit: cover;
+    object-position: center;
     overflow: hidden;
     height: auto;
     max-width: 100%;
@@ -74,7 +75,7 @@ footer {
     border-radius: .75rem;
   }
   &__logo-container {
-    padding: 1rem;
+    padding: 1rem 2rem ;
   }
   &__logo {
     width: 100%;
