@@ -1,6 +1,10 @@
 // Global styles
 @import url("css/tokens.css");
 
+body {
+  font-family: 'Raleway';
+}
+
 .ef-body {
   margin: 0;
   background-color: var(--color-main-background);
