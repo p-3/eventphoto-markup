@@ -64,7 +64,12 @@ footer {
       justify-content: end;
     }
   }
-
+  &__menu {
+    padding: auto;
+  }
+  &__tools {
+    display: flex;
+  }
   &__card {
     display: flex;
     width: 19.875rem;
@@ -79,5 +84,11 @@ footer {
   }
   &__logo {
     width: 100%;
+  }
+  &__text {
+
+  }
+  &__text--500 {
+    display: none;
   }
 }

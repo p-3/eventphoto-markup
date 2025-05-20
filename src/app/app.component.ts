@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'eventphoto-markup';
+  showSearch = false;
+  languageMenuOpen = false;
+
+  toggleSearch(): void {
+    this.showSearch = !this.showSearch;
+  }
+
+  toggleLanguageMenu(): void {
+    this.languageMenuOpen = !this.languageMenuOpen;
+  }
 }
