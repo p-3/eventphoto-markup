@@ -11,12 +11,10 @@
             <div class="header-features__menu">&nbsp;</div>
 
             <div class="header-features__tools">
-              <div class="flex gap-4">
 
                 <!-- Sök-knapp med input -->
-                <div class="relative">
-                  <button (click)="toggleSearch()"
-                          class="bg-black text-white px-4 py-2 rounded-lg flex items-center gap-2">
+                <div class="header-features__tools-wrapper">
+                  <button (click)="toggleSearch()" class="header-features__buttons">
                     <span>Sök</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -31,9 +29,8 @@
                 </div>
 
                 <!-- Språk-knapp med dropdown -->
-                <div class="relative">
-                  <button (click)="toggleLanguageMenu()"
-                          class="bg-black text-white px-4 py-2 rounded-lg flex items-center gap-2">
+                <div class="header-features__tools-wrapper">
+                  <button (click)="toggleLanguageMenu()" class="header-features__buttons">
                     <span>Språk</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -49,8 +46,6 @@
                     </ul>
                   </div>
                 </div>
-
-              </div>
             </div>
           </div>
 
