@@ -3,21 +3,26 @@
   --main-content-max-width: 1440px;
 
   /* Color units */
-  --color-main-background: #1b1b1b;
+  /* --color-main-background: #1b1b1b; */
+  --color-main-background: color-mix(in srgb, #000000 89.4%, #ffffff 10.6%);
+  --color-button-background: color-mix(in srgb, #000000 86.7%, #ffffff 13.3%);
+  --color-boxes-background: color-mix(in srgb, #000000 82.7%, #ffffff 17.3%);
   --color-main-white: #fff;
   --color-main-text: #d7d7d7;
   --color-main-black: #222;
   --color-base-font: #fff;
-  --color-link-selected-background: #333;
+  --color-place-text: #ababab;
+  --color-button-background-show-more: #4C7B8B;
+  /* --color-link-selected-background: #333;
   --color-link-focus-background: #cdcdcd;
   --color-link-border-bottom: #777;
   --color-link-border: #888;
   --color-link-hover: #fff;
-  --color-border: #fff;
-  --color-border-black: #999;
+  --color-border: #fff;*/
+  --color-border-grid: #5A5858;
 
-  --color-button-accept: #0051A8;
-  --color-button-accept-hover: #5b82ac;
+  /*--color-button-accept: #0051A8;
+  --color-button-accept-hover: #5b82ac; */
 
   --button-hover-color: color-mix(in srgb, #000 10%, #808000);
   --button-active-color: color-mix(in srgb, #000 20%, #808000);
@@ -28,11 +33,9 @@
   --h1-font-size: 2rem;
   --h2-font-size: 1.5rem;
   --h3-font-size: 1.125rem;
-  --datetime-font-size: .75rem;
-  --news-article-header-font-size: 1rem;
-  --news-page-article-h2-font-size: 1.5rem;
 
   /* Margin and padding units */
   --frame-margin-or-padding-upto-768: 1.5rem;
   --frame-margin-or-padding-upto-390: 1rem;
+
 }

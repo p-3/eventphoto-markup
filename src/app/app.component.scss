@@ -26,18 +26,6 @@ header {
   overflow: hidden;
 }
 
-.main-content {
-  grid-area: main-content;
-  background-color: #666;
-}
-
-footer {
-  grid-area: footer;
-  background-color: #999;
-}
-.test {
-  position: relative;
-}
 .hero {
   &__img {
     //max-height: 40rem;
@@ -70,7 +58,7 @@ footer {
   }
   &__row {
     width: 100%;
-    max-width: 1440px;
+    max-width: var(--main-content-max-width);
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 2rem 0;
@@ -94,10 +82,10 @@ footer {
     &-wrapper {
       display: flex;
       width: 19.875rem;
-      padding: 1.5rem;
+      padding: 1.5rem 01.5rem 2rem;
       justify-content: center;
       flex-wrap: wrap;
-      background-color: var(--color-main-black);
+      background-color: var(--color-boxes-background);
       border-radius: .75rem;
       margin-bottom: 2rem;
       text-align: center;
@@ -126,7 +114,10 @@ footer {
     line-height: 20px;
   }
   &__text--500 {
-     display: none; // kontakt formulär text
+    display: none; // kontakt formulär text
+    font-weight: 500;
+    font-size: .875rem;
+line-height: 20px;
   }
   &__buttons {
     display: flex;
@@ -143,7 +134,7 @@ footer {
     align-items: center;
     cursor: pointer;
     color: var(--color-main-text);
-    background-color: var(--color-main-black);
+    background-color: var(--color-button-background);
     background-image: none;
     text-transform: none;
   }
@@ -155,7 +146,7 @@ footer {
     top: 2.8rem;
     right: 0;
     padding: 1rem;
-    background-color: var(--color-main-black);
+    background-color: var(--color-boxes-background);
     border-radius: .75rem;
   }
   &__tools-language {
@@ -163,7 +154,7 @@ footer {
     top: 2.8rem;
     right: 0;
     padding: 2rem 1.5rem 1.5rem;
-    background-color: var(--color-main-black);
+    background-color: var(--color-boxes-background);
     border-radius: .75rem;
     width: 19.875rem;
     color: var(--color-main-text);
@@ -197,5 +188,139 @@ footer {
     font-size: 1.125rem;
     line-height: 1.5rem;
     letter-spacing: 0;
+  }
+}
+
+main {
+  grid-area: main-content;
+  &.main-content {
+    background-color: var(--color-main-background);
+    margin: 0 2rem;
+  }
+}
+
+footer {
+  grid-area: footer;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  border-top: solid 1px var(--color-border-grid);
+  background-color: var(--color-main-background);
+  height: 100%;
+  min-height: 10rem;
+  &__container {
+    width: 100%;
+    display: flex;
+    max-width: var(--main-content-max-width);
+  }
+  &__content {
+    width: 100%;
+    margin: 0 2rem;
+  }
+  &__header {
+    color: var(--color-main-text);
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.875rem;
+    letter-spacing: 0;
+    margin: 3rem 0 0;
+  }
+}
+
+// Photo grid
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(332.1px, 1fr)); /* Tre kolumner */
+  gap: 3rem 1.5rem;
+  position: relative;
+  padding-top: 4rem;
+  margin-bottom: 2rem;
+  &__full-witdh {
+    grid-column: span 3;
+    justify-self: center;
+    margin: 3rem 0;
+  }
+  &__show-more {
+    display: flex;
+    font-family: inherit;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: inherit;
+    letter-spacing: inherit;
+    border-width: 0;
+    border-style: solid;
+    padding: .75rem 1.25rem;
+    border-radius: 0.75rem;
+    gap: .75rem;
+    align-items: center;
+    cursor: pointer;
+    color: var(--color-main-text);
+    background-color: var(--color-button-background-show-more);
+    background-image: none;
+    text-transform: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .photo-grid {
+      grid-template-columns: repeat(auto-fit, minmax(309.1px, 1fr)); /* Blir två kolumner */
+  }
+}
+
+.photo-article {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  row-gap: .625rem;
+  color: var(--color-main-text);
+}
+.photo-article-header {
+  font-weight: 500;
+  font-size: var(--body-font-size);
+  line-height: 20px;
+  letter-spacing: 0;
+  margin: 0;
+  color: var(--color-main-text);
+}
+.photo-article-link {
+  text-decoration: none;
+}
+.photo-article-image img { /* Höjd och vidd sätts för att det innehållet inte ska röra sig om bild-inladdniingen tar tid*/
+  display: block;
+  transition: all .3s ease-in-out;
+  width: 100%;
+  max-height: 56.25%; /* Ihop med width får bilden ett 16/9 ratio */
+  border-radius: .75rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.photo-article-header {
+  transition: all .3s ease-in-out;
+}
+.photo-article-place {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: var(--color-place-text);
+}
+.photo-article-image {
+  margin: 0;
+}
+.photo-article-link:hover .photo-article-image img {
+  filter: brightness(50%);
+}
+.photo-article-link:hover .photo-article-header {
+  text-decoration: underline;
+  transition: all .3s ease-in-out;
+}
+
+@media (max-width: 768px) { /* Media query som sätter full bredd stående ipad mini  */
+  .photo-page-article__image {
+      max-width: 100%;
   }
 }

@@ -2,7 +2,7 @@
   <header>
     <div class="header__wrapper">
       <picture class="hero">
-        <img class="hero__img" alt="Hero image" src="hero.png">
+        <img class="hero__img" alt="Hero image" src="hero2.png">
       </picture>
 
       <div class="header-features">
@@ -22,7 +22,6 @@
                   <div *ngIf="showSearch" class="header-features__tools-searchbox">
                     <input *ngIf="showSearch" type="text" placeholder="Sök..." class="" />
                   </div>
-
                 </div>
                 <!-- Språk-knapp med dropdown -->
                 <div class="header-features__tools-wrapper">
@@ -50,7 +49,6 @@
                 </div>
             </div>
           </div>
-
           <div class="header-features__row header-features__row--right">
             <div class="header-features__card">
                 <div class="header-features__card-wrapper">
@@ -78,18 +76,153 @@
                 </p></div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
   </header>
-
-  <section class="main-content">
+  <main class="main-content">
     <p>Main innehåll</p>
-  </section>
-
+    <section class="photo-grid">
+      <a href="###" class="photo-article-link">
+          <article class="photo-article">
+              <figure class="photo-article-image">
+                  <img src="photo-grid1.jpg" alt="Cigarröknande man på cykel i regn">
+              </figure>
+              <h2 class="photo-article-header">
+                Kent
+              </h2>
+              <p class="photo-article-place">
+                Globen, Stockholm
+              </p>
+          </article>
+      </a>
+      <a href="###" class="photo-article-link">
+        <article class="photo-article">
+            <figure class="photo-article-image">
+                <img src="photo-grid2.jpg" alt="Cigarröknande man på cykel i regn">
+            </figure>
+            <h2 class="photo-article-header">
+                Mönster på Stefansdomen!
+            </h2>
+            <p class="photo-article-place">
+                Globen
+            </p>
+        </article>
+      </a>
+      <a href="###" class="photo-article-link">
+        <article class="photo-article">
+            <figure class="photo-article-image">
+                <img src="photo-grid3.jpg" alt="Cigarröknande man på cykel i regn">
+            </figure>
+            <h2 class="photo-article-header">
+                Mönster på Stefansdomen!
+            </h2>
+            <p class="photo-article-place">
+                Globen
+            </p>
+        </article>
+      </a>
+      <a href="###" class="photo-article-link">
+        <article class="photo-article">
+            <figure class="photo-article-image">
+                <img src="photo-grid4.jpg" alt="Cigarröknande man på cykel i regn">
+            </figure>
+            <h2 class="photo-article-header">
+                Mönster på Stefansdomen!
+            </h2>
+            <p class="photo-article-place">
+                Globen
+            </p>
+        </article>
+      </a>
+      <a href="###" class="photo-article-link">
+        <article class="photo-article">
+            <figure class="photo-article-image">
+                <img src="photo-grid5.jpg" alt="Cigarröknande man på cykel i regn">
+            </figure>
+            <h2 class="photo-article-header">
+                Mönster på Stefansdomen!
+            </h2>
+            <p class="photo-article-place">
+                Globen
+            </p>
+        </article>
+      </a>
+      <a href="###" class="photo-article-link">
+        <article class="photo-article">
+            <figure class="photo-article-image">
+                <img src="photo-grid6.jpg" alt="Cigarröknande man på cykel i regn">
+            </figure>
+            <h2 class="photo-article-header">
+                Mönster på Stefansdomen!
+            </h2>
+            <p class="photo-article-place">
+                Globen
+            </p>
+        </article>
+      </a>
+      <a href="###" class="photo-article-link">
+        <article class="photo-article">
+            <figure class="photo-article-image">
+                <img src="photo-grid7.jpg" alt="Cigarröknande man på cykel i regn">
+            </figure>
+            <h2 class="photo-article-header">
+                Mönster på Stefansdomen!
+            </h2>
+            <p class="photo-article-place">
+                Globen
+            </p>
+        </article>
+      </a>
+      <a href="###" class="photo-article-link">
+        <article class="photo-article">
+            <figure class="photo-article-image">
+                <img src="photo-grid8.jpg" alt="Cigarröknande man på cykel i regn">
+            </figure>
+            <h2 class="photo-article-header">
+                Mönster på Stefansdomen!
+            </h2>
+            <p class="photo-article-place">
+                Globen
+            </p>
+        </article>
+      </a>
+      <a href="###" class="photo-article-link">
+        <article class="photo-article">
+            <figure class="photo-article-image">
+                <img src="photo-grid1.jpg" alt="Cigarröknande man på cykel i regn">
+            </figure>
+            <h2 class="photo-article-header">
+                Mönster på Stefansdomen!
+            </h2>
+            <p class="photo-article-place">
+                Globen
+            </p>
+        </article>
+      </a>
+      <div class="photo-grid__full-witdh">
+        <button class="photo-grid__show-more">
+          <span>Visa fler</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Lodrät linje -->
+            <line x1="12" y1="6" x2="12" y2="16" stroke="#d7d7d7" stroke-width="2" stroke-linecap="round" />
+            <!-- Pilspets -->
+            <polyline points="8,12 12,16 16,12" fill="none" stroke="#d7d7d7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </section>
+  </main>
   <footer>
-    <p>Footer innehåll</p>
+    <section class="footer">
+      <div class="footer__container">
+        <div class="footer__content">
+          <h2 class="footer__header">
+            Event photpoto &copy;
+          </h2>
+        </div>
+      </div>
+    </section>
   </footer>
 </section>
 
