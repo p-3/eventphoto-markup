@@ -1,10 +1,10 @@
 <section class="ef-startpage-grid">
   <header>
     <div class="header__wrapper">
-      <picture class="hero">
+      <!-- hero image -->
+      <figure class="hero">
         <img class="hero__img" alt="Hero image" src="hero2.png">
-      </picture>
-
+      </figure>
       <div class="header-features">
         <div class="header-features__wrapper">
           <div class="header-features__row">
@@ -12,7 +12,7 @@
             <div class="header-features__tools">
                 <!-- Sök-knapp med input -->
                 <div class="header-features__tools-wrapper">
-                  <button (click)="toggleSearch()" class="header-features__buttons">
+                  <button (click)="toggleSearch()" class="header-features__button black-button">
                     <span>Sök</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="header-features__search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -25,7 +25,7 @@
                 </div>
                 <!-- Språk-knapp med dropdown -->
                 <div class="header-features__tools-wrapper">
-                  <button (click)="toggleLanguageMenu()" class="header-features__buttons">
+                  <button (click)="toggleLanguageMenu()" class="header-features__button black-button">
                     <span>Språk</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="header-features__chevron-icon header-features__chevron-icon--up" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -52,9 +52,16 @@
           <div class="header-features__row header-features__row--right">
             <div class="header-features__card">
                 <div class="header-features__card-wrapper">
-                <picture class="header-features__logo-container">
+
+                <!-- <figure class="header-features__logo-container">
                   <img class="header-features__logo" alt="Eventfoto logotype" src="ef-logo.png">
-                </picture>
+                </figure> -->
+                <figure class="header-features__logo-container">
+                  <img class="header-features__logo" alt="Eventfoto logotype" src="ef-logo.png">
+                  <figcaption>
+                    <h1 class="visually-hidden">Eventfoto logotype</h1>
+                  </figcaption>
+                </figure>
 
                 <h2 class="header-features__heading">Fånga ögonblicket</h2>
                 <div>
@@ -81,8 +88,53 @@
     </div>
   </header>
   <main class="main-content">
-    <p>Main innehåll</p>
+    <section class="last-event">
+      <figure class="last-event__img-wrapper">
+        <img class="last-event__img" alt="Last event pictire" src="last-event.jpg">
+      </figure>
+      <div class="last-event__info-wrapper">
+        <p class="last-event__info">Senaste event</p>
+        <h2 class="last-event__heading">Medina</h2>
+        <h3 class="last-event__subtitle">Tung gung i Världsklass</h3>
+        <p class="last-event__info">Mall Of Scandinavia, 25 Augusti 2025</p>
+        <p class="last-event__info last-event__info--small">
+          Medina är en svensk musikduo som består av Sami Rekik (SAMI) och Ali Jammali (ALI).
+          Gruppen bildades i början av 2000-talet och är kända för att blanda hiphop med mellanöstern-
+          och nordafrikanska rytmer, något de själva kallar för "Haffla Music" – en partymusikstil
+          med internationell känsla.
+        </p>
+        <button class="last-event__button green-button">
+          <span>Gå till eventet</span>
+        </button>
+      </div>
+    </section>
     <section class="photo-grid">
+      <div class="photo-grid__full-witdh reset-margin">
+        <h2 class="photo-grid__header">Alla event</h2>
+        <div class="photo-grid__sort-buttons">
+          <button class="photo-grid__sort-button black-button">
+            <span>Alla</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="green-check" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M9 12l2 2l4-4" fill="none" />
+            </svg>
+          </button>
+          <button class="photo-grid__sort-button black-button">
+            <span>Musik</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="dark-check" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M9 12l2 2l4-4" fill="none" />
+            </svg>
+          </button>
+          <button class="photo-grid__sort-button black-button">
+            <span>Sport</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="dark-check" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M9 12l2 2l4-4" fill="none" />
+            </svg>
+           </button>
+        </div>
+      </div>
       <a href="###" class="photo-article-link">
           <article class="photo-article">
               <figure class="photo-article-image">
@@ -201,12 +253,10 @@
         </article>
       </a>
       <div class="photo-grid__full-witdh">
-        <button class="photo-grid__show-more">
+        <button class="photo-grid__show-more green-button">
           <span>Visa fler</span>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Lodrät linje -->
             <line x1="12" y1="6" x2="12" y2="16" stroke="#d7d7d7" stroke-width="2" stroke-linecap="round" />
-            <!-- Pilspets -->
             <polyline points="8,12 12,16 16,12" fill="none" stroke="#d7d7d7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>

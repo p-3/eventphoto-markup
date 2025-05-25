@@ -6,13 +6,14 @@
   /* --color-main-background: #1b1b1b; */
   --color-main-background: color-mix(in srgb, #000000 89.4%, #ffffff 10.6%);
   --color-button-background: color-mix(in srgb, #000000 86.7%, #ffffff 13.3%);
+  --color-button-background-check-black: #2c2c2c;
   --color-boxes-background: color-mix(in srgb, #000000 82.7%, #ffffff 17.3%);
   --color-main-white: #fff;
   --color-main-text: #d7d7d7;
   --color-main-black: #222;
   --color-base-font: #fff;
   --color-place-text: #ababab;
-  --color-button-background-show-more: #4C7B8B;
+  --color-button-background-green: #4C7B8B;
   /* --color-link-selected-background: #333;
   --color-link-focus-background: #cdcdcd;
   --color-link-border-bottom: #777;
