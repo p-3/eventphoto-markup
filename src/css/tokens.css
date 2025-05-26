@@ -7,6 +7,7 @@
   --color-main-background: color-mix(in srgb, #000000 89.4%, #ffffff 10.6%);
   --color-button-background: color-mix(in srgb, #000000 86.7%, #ffffff 13.3%);
   --color-button-background-check-black: #2c2c2c;
+  --color-background-searchbox: #2c2c2c;
   --color-boxes-background: color-mix(in srgb, #000000 82.7%, #ffffff 17.3%);
   --color-main-white: #fff;
   --color-main-text: #d7d7d7;

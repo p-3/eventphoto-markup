@@ -19,9 +19,7 @@
                             d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z"/>
                     </svg>
                   </button>
-                  <div *ngIf="showSearch" class="header-features__tools-searchbox">
-                    <input *ngIf="showSearch" type="text" placeholder="Sök..." class="" />
-                  </div>
+
                 </div>
                 <!-- Språk-knapp med dropdown -->
                 <div class="header-features__tools-wrapper">
@@ -274,6 +272,30 @@
       </div>
     </section>
   </footer>
+  <div class="backdrop" *ngIf="showSearch" (click)="toggleSearch()">
+    <div class="seachbox" (click)="$event.stopPropagation()">
+      <h2 class="seachbox__heading">Sök event</h2>
+      <div class="seachbox__input-row">
+        <div class="seachbox__input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input type="text" placeholder="Vad letar du efter" class="seachbox__input" />
+        </div>
+        <button class="seachbox__button green-button">
+          Sök
+        </button>
+      </div>
+      <ul class="seachbox__list">
+        <li class="seachbox__list-item">Sökförslag</li>
+        <li class="seachbox__list-item">Sökförslag</li>
+        <li class="seachbox__list-item">Sökförslag</li>
+        <li class="seachbox__list-item">Sökförslag</li>
+      </ul>
+    </div>
+  </div>
+
 </section>
 
 <router-outlet></router-outlet>
